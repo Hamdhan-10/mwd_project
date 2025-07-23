@@ -2,7 +2,7 @@
 <html>
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXT LEVEL APPAREL INDUSTRY</title>  
+  <title>NEXT LEVEL APPAREL INDUSTRY</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,12 @@
    <nav>
     <a href="index.html"><img src="Images/logo2.jpg" class="mmm"></a>
      <div class="nav-links">
-  
+
       <ul>
        <li><a href="{{ url('/hello') }}">HOME</a></li>
        <li><a href="{{ url('/about') }}">ABOUT</a></li>
-       <li><a href="{{ url('/products') }}">PRODUCTS</a></li> 
-       <li><a href="{{ url('/contact') }}">CONTACT</a></li>   
+       <li><a href="{{ url('/products') }}">PRODUCTS</a></li>
+       <li><a href="{{ url('/contact') }}">CONTACT</a></li>
 
 
   </ul>
@@ -88,7 +88,7 @@
 
 
     </div>
-    
+
   </div>
 
 
@@ -107,16 +107,11 @@
        <i class="fa-brands fa-twitter"></i>
        <i class="fa-brands fa-instagram"></i>
        <i class="fa-brands fa-linkedin-in"></i>
-  
+
 
 </div>
 
 </section>
-
-
-
-
-
 
 </body>
 </html>

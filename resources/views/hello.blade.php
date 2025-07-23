@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Level Apparel Industry</title>  
+    <title>Next Level Apparel Industry</title>
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,9 @@
             <ul>
                 <li><a href="">HOME</a></li>
                 <li><a href="{{ url('/about') }}">ABOUT</a></li>
-                <li><a href="{{ url('/products') }}">PRODUCTS</a></li> 
+                <li><a href="{{ url('/products') }}">PRODUCTS</a></li>
                 <li><a href="{{ url('/contact') }}">CONTACT</a></li>
-   
+
             </ul>
         </div>
     </nav>
@@ -30,7 +30,7 @@
     <div class="text-box">
         <h1>NEXT LEVEL APPAREL</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>r sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" class="hero-btn">Log in / Sign up</a>
+        <a href="{{ url('/login')}}" class="hero-btn">Log in</a>
     </div>
 </section>
 
@@ -109,6 +109,5 @@
         <i class="fa-brands fa-linkedin-in"></i>
     </div>
 </section>
-
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html>
  <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Next Level Apparel</title>  
+   <title>Next Level Apparel</title>
    <link rel="stylesheet" href="{{ asset('style.css') }}">
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,11 @@
       <a href="#"><img src="{{ asset('images/logo2.jpg') }}" class="mmm"></a>
       <div class="nav-links">
         <ul>
-          <li><a href="{{ url('/home') }}">HOME</a></li>
+          <li><a href="{{ url('/hello') }}">HOME</a></li>
           <li><a href="{{ url('/about') }}">ABOUT</a></li>
-          <li><a href="{{ url('/products') }}">PRODUCTS</a></li> 
+          <li><a href="{{ url('/products') }}">PRODUCTS</a></li>
           <li><a href="{{ url('/contact') }}">CONTACT</a></li>
-  
+
         </ul>
       </div>
     </nav>
