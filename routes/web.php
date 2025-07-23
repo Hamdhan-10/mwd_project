@@ -3,31 +3,39 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\ProductController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Auth;
 
-// 🟢 Set hello page as default (home) page
+//  Public homepage for everyone
 Route::get('/', function () {
     return view('hello');
-});
+})->name('hello');
 
-// 🟢 Login routes
+// 🟢 Login
 Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::post('/login', function (Request $request) {
-    return redirect('/hello')->with('success', 'Login successful!');
-});
+Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 
-// 🟢 Hello route (optional since it's also default now)
-Route::get('/hello', function () {
-    return view('hello');
-});
+// 🟢 Register
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
 
-// 🟢 About and contact pages
+Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
+
+// 🔴 Logout
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/'); // Redirect to home after logout
+})->name('logout');
+
+// 🔗 About, Contact
 Route::view('/about', 'about')->name('about');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactMessageController::class, 'store'])->name('contact.store');
 
-// 🟢 Products page
+//  Products
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');

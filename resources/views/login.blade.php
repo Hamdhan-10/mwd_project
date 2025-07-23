@@ -97,8 +97,13 @@
   <section class="login-form-section">
     <form action="{{ url('/login') }}" method="post" class="login-form">
       @csrf
+      <input type="name" name="name" placeholder="Enter Your Name" required />
       <input type="email" name="email" placeholder="Enter your email" required />
       <input type="password" name="password" placeholder="Enter your password" required />
+      @if(session('success'))
+  <script>alert("{{ session('success') }}");</script>
+@endif
+        
       <button type="submit" class="hero-btn red-btn">Login</button>
     </form>
 
